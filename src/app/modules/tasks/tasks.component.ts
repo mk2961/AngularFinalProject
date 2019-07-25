@@ -2,6 +2,7 @@ import { Component, OnInit } from "@angular/core";
 
 import { Task } from "../../models/task";
 import { InputTaskComponent } from "../input-task/input-task.component";
+import { TaskDataService } from "../../service/task-data.service";
 
 @Component({
   selector: "app-tasks",
@@ -23,8 +24,13 @@ export class TasksComponent implements OnInit {
       name: "Task3"
     }
   ];
+  getTasks() {
+    return this.tasks.valueOf();
+  }
 
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.getTasks();
+  }
 }

@@ -1,6 +1,14 @@
-<h4>Your task number picked is.. {{ value }}!</h4>
 <div></div>
 <p>Which Task Would You like to edit?</p>
-<input (keyup)="index()" />
-<button (click)="onClickMe()">Add Task</button>
-<button>Delete Task</button>
+<p>Task Idex 0 - end -------------------- Task Name:</p>
+<form id="ID" onsubmit="return false;">
+  <input type="text" id="userID" />
+  <label>User Id</label>
+  <input type="text" id="userName" />
+  <label>User Name</label>
+</form>
+
+<form id="addTask" onsubmit="return false;">
+  <button (click)="onAddMe(userID, UserName)">Add Task</button>
+  <button onclick="onDeleteMe(index)">Delete Task</button>
+</form>
